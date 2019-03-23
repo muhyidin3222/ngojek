@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">NGOJEK</string>
+    <string name="facebook_app_id">629619127500413</string> <string name="fb_login_protocol_scheme">fb629619127500413</string>
+</resources>
