@@ -1,5 +1,4 @@
-import { AppRegistry, YellowBox } from 'react-native';
-// import App from './src/main';
+import { AppRegistry, View, Text, YellowBox } from 'react-native';
 import App from './src/main'
 import { name as appName } from './app.json';
 
