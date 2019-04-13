@@ -5,13 +5,23 @@ import Routers from '../../routers/home';
 import { Links, Images, ViewLink, ImageInbox } from '../../components/navBar'
 import ElevatedView from 'react-native-elevated-view'
 
+<<<<<<< HEAD
 //image
+=======
+import { connect } from 'react-redux'
+import { numberChange } from '../../actions/index'
+
+>>>>>>> 8c02c185a3a763b2cb44d934acf610311a954356
 import {
     IconGreenInbox, IconGreenAccount, IconGreyAccount, IconGreenBeranda,
     IconGreyBeranda, IconGreenHelp, IconGreyHelp, IconGreyInbox, IconGreenChat, IconGreyChat
 } from '../../assets/navBar'
 
+<<<<<<< HEAD
 export default class Index extends Component {
+=======
+class Index extends Component {
+>>>>>>> 8c02c185a3a763b2cb44d934acf610311a954356
 
     constructor(props) {
         super(props)
@@ -75,8 +85,11 @@ export default class Index extends Component {
     };
 
     render() {
+<<<<<<< HEAD
         this.props.numberChange()
 
+=======
+>>>>>>> 8c02c185a3a763b2cb44d934acf610311a954356
         var { colorAccount, colorBeranda, colorChat, colorIndox, colorHelp } = this.state
 
         return (
@@ -123,6 +136,17 @@ export default class Index extends Component {
     }
 };
 
+<<<<<<< HEAD
+=======
+const mapStateToProps = (state) => {
+    const { number } = state.reducer
+    console.log('number')
+    return { number }
+}
+
+export default connect(mapStateToProps, { numberChange })(Index)
+
+>>>>>>> 8c02c185a3a763b2cb44d934acf610311a954356
 const styles = StyleSheet.create({
     container: {
         flex: 1,
