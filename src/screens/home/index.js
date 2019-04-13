@@ -5,22 +5,13 @@ import Routers from '../../routers/home';
 import { Links, Images, ViewLink, ImageInbox } from '../../components/navBar'
 import ElevatedView from 'react-native-elevated-view'
 
-<<<<<<< HEAD
-import { connect } from 'react-redux'
-import { numberChange } from '../../actions/index'
-=======
->>>>>>> 8fde18e5cfc18ec436fdd6ea52c78a287dc77471
 //image
 import {
     IconGreenInbox, IconGreenAccount, IconGreyAccount, IconGreenBeranda,
     IconGreyBeranda, IconGreenHelp, IconGreyHelp, IconGreyInbox, IconGreenChat, IconGreyChat
 } from '../../assets/navBar'
 
-<<<<<<< HEAD
-class Index extends Component {
-=======
 export default class Index extends Component {
->>>>>>> 8fde18e5cfc18ec436fdd6ea52c78a287dc77471
 
     constructor(props) {
         super(props)
@@ -84,13 +75,10 @@ export default class Index extends Component {
     };
 
     render() {
-<<<<<<< HEAD
-        // console.log(this.props)
-        var { colorAccount, colorBeranda, colorChat, colorIndox, colorHelp } = this.state
-=======
+        this.props.numberChange()
+
         var { colorAccount, colorBeranda, colorChat, colorIndox, colorHelp } = this.state
 
->>>>>>> 8fde18e5cfc18ec436fdd6ea52c78a287dc77471
         return (
             <View style={styles.container}>
                 <NativeRouter>
@@ -135,18 +123,6 @@ export default class Index extends Component {
     }
 };
 
-<<<<<<< HEAD
-const mapStateToProps = (state) => {
-    const { number } = state.reducer
-    console.log('number')
-    return { number }
-}
-
-export default connect(mapStateToProps, { numberChange })(Index)
-
-
-=======
->>>>>>> 8fde18e5cfc18ec436fdd6ea52c78a287dc77471
 const styles = StyleSheet.create({
     container: {
         flex: 1,

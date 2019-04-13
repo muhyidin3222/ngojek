@@ -61,7 +61,6 @@ class Facebook extends Component {
   };
 
   render() {
-    console.log("percobaan")
     return (
       <View style={styles.facebook}>
         <TouchableOpacity style={styles.touchableOpacity} onPress={this.loginFB}>
