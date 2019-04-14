@@ -31,8 +31,15 @@ const HeaderChangeAccount = (props) => {
                 {/* <View> <Text>back</Text></View> */}
                 <Text style={styles.text}>{props.children}</Text>
             </View>
-            <TouchableOpacity onPress={props.onPress} style={styles.touchableOpacity}>
-                <Text style={{color: '#ffffff'}}>SIMPAN</Text>
+            <TouchableOpacity onPress={props.onPress} style={{
+                width: 80,
+                height: 35,
+                backgroundColor: props.backgroundColor,
+                margin: 10,
+                alignItems: "center",
+                justifyContent: "center"
+            }}>
+                <Text style={{ color: '#ffffff' }}>SIMPAN</Text>
             </TouchableOpacity>
         </ElevatedView>
     )

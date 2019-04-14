@@ -1,6 +1,4 @@
-import ChangeAccount from "./changeAccount";
-
-var styles = ({
+const styles = ({
     container: {
         flex: 1,
         backgroundColor: '#eaeaea'
@@ -96,6 +94,16 @@ const changeAccount = ({
         borderBottomColor: '#D3D3D3',
         borderBottomWidth: 0.5,
         width: '100%'
+    },
+    number: {
+        flexDirection: 'row',
+        // justifyContent: 'space-between',
+        alignItems: 'center'
+    },
+    setTextInput: {
+        flexDirection: 'row',
+        justifyContent: "space-between",
+        alignItems: "center"
     }
 });
 
