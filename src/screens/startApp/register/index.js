@@ -3,16 +3,25 @@ import { View, TextInput, Text, TouchableOpacity, Button, Image } from 'react-na
 import { numberCountry } from '../../../assets/startApp'
 import styles from './style'
 import { Touchable } from '../component'
+import { HeaderAppStart } from '../../../components/header'
 
 class Register extends React.Component {
     state = {
-        NoHp: ''
+        NoTelp: ''
+    }
+
+    cek() {
+        console.log('cek')
+        setTimeout(() => {
+            return (Actions.home())
+        }, 1000);
     }
 
     render() {
         return (
             <View style={styles.layout}>
                 <View>
+                    <HeaderAppStart />
                     <View style={styles.headerForm}>
                         <Text style={styles.fontHeaderForm}>
                             Lengkapi data dirimu di bawah ini ya
@@ -58,7 +67,7 @@ class Register extends React.Component {
                                             value={this.state.NoHp}
                                             style={styles.textInput}
                                             placeholder="Cth: 812808080"
-                                            onChangeText={(NoHp) => this.setState({ NoHp })}
+                                            onChangeText={(NoHp) => this.setState({ NoTelp })}
                                         />
                                     </View>
                                 </View>
@@ -66,7 +75,7 @@ class Register extends React.Component {
                         </View>
                     </View>
                 </View>
-                {this.state.NoHp.length > 5 ? <Touchable backgroundColor={true} /> : <Touchable />}
+                {this.state.NoTelp.length > 10 ? <Touchable backgroundColor={true} onPress={this.cek()} /> : <Touchable />}
             </View>
         );
     }

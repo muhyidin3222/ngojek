@@ -24,12 +24,7 @@ class App extends React.Component {
             <Provider store={store}>
                 <Routers />
             </Provider>
-<<<<<<< HEAD
         );
-=======
-
-        )
->>>>>>> 8c02c185a3a763b2cb44d934acf610311a954356
     }
 }
 export default App;

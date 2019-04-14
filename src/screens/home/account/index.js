@@ -4,7 +4,8 @@ import { Header } from '../../../components/header'
 import Facebook from '../../../components/facebook'
 import { CodePromo, Voucer, Help, Judgment, Language, Policy, Provisions } from '../../../assets/account'
 import { SettingImage, SettingImageEnd } from '../../../components/settingAccount'
-// import {} from 'native'
+import { styles, image } from './style'
+import { Actions } from 'react-native-router-flux'
 
 export default class Account extends Component {
     state = {
@@ -25,7 +26,7 @@ export default class Account extends Component {
                             <Text style={{ fontWeight: "400" }}>{email}</Text>
                             <Text style={{ fontWeight: "400", paddingTop: 5 }}>{number}</Text>
                         </View>
-                        <TouchableOpacity><Text style={{ color: 'green' }}>UBAH</Text></TouchableOpacity>
+                        <TouchableOpacity onPress={() => Actions.changeAccount()}><Text style={{ color: 'green' }}>UBAH</Text></TouchableOpacity>
                     </View>
                     <View style={styles.viewFaceebook}>
                         <Text>Tekan Tombol di bawah untuk tersambung ke </Text>
@@ -57,72 +58,4 @@ export default class Account extends Component {
     }
 }
 
-var styles = StyleSheet.create({
-    container: {
-        flex: 1,
-        backgroundColor: '#eaeaea'
-    },
-    Account: {
-        padding: 13,
-        width: '100%',
-        backgroundColor: '#ffffff',
-        flexDirection: 'row',
-        justifyContent: 'space-between'
-    },
-    viewFaceebook: {
-        padding: 10,
-        backgroundColor: '#ffffff',
-        marginTop: 20
-    },
-    background: {
-        backgroundColor: '#ffffff',
-        flex: 1,
-        marginTop: 20
-    },
-    out: {
-        width: '100%',
-        height: 50,
-        justifyContent: 'center',
-        alignItems: "center",
-        backgroundColor: '#ffffff',
-        marginTop: 20
-    }
-});
-
-const image = StyleSheet.create({
-    codePromo: {
-        width: 20,
-        height: 24,
-        margin: 20
-    },
-    voucer: {
-        width: 23,
-        height: 26,
-        margin: 20
-    },
-    language: {
-        width: 27,
-        height: 20,
-        margin: 20
-    },
-    help: {
-        width: 24,
-        height: 24,
-        margin: 20
-    },
-    provisions: {
-        width: 23,
-        height: 24,
-        margin: 20
-    },
-    policy: {
-        width: 23,
-        height: 26,
-        margin: 20
-    },
-    judgment: {
-        width: 25,
-        height: 24,
-        margin: 20
-    }
-})
+//085711370695

@@ -10,7 +10,9 @@ export const Touchable = (props) => {
             backgroundColor: props.backgroundColor ? "#16b505" : "#8e8f91",
             justifyContent: 'center',
             alignItems: 'center'
-        }}>
+        }}
+            onPress={() => { props.onPress }}
+        >
             <Text style={{
                 fontWeight: '500',
                 fontSize: 16,

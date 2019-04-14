@@ -5,16 +5,18 @@ import Login from '../screens/startApp/login'
 import StartApp from '../screens/startApp/index'
 import Register from '../screens/startApp/register'
 import Home from '../connect'
+import ChangeAccount from '../screens/home/account/changeAccount'
 
 export default class Routers extends Component {
     render() {
         return (
             <Router>
                 <Stack key="root">
-                    <Scene key="loginEndRegister" component={StartApp} hideNavBar={true} />
-                    <Scene key="login" component={Login} />
-                    <Scene key="register" component={Register} />
+                    <Scene key="changeAccount" component={ChangeAccount} hideNavBar={true} />
                     <Scene key="home" component={Home} hideNavBar={true} />
+                    <Scene key="loginEndRegister" component={StartApp} hideNavBar={true} />
+                    <Scene key="login" component={Login} hideNavBar={true} />
+                    <Scene key="register" component={Register} hideNavBar={true} />
                 </Stack>
             </Router>
         )

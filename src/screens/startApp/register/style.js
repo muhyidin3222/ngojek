@@ -36,7 +36,6 @@ export default styles = ({
         fontWeight: '500'
     },
     headerForm: {
-        paddingTop: 20,
         paddingLeft: 15,
         paddingRight: 15,
         paddingBottom: 20

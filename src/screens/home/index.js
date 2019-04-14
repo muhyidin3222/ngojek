@@ -2,26 +2,17 @@ import React, { Component } from "react";
 import { StyleSheet, Text, View } from "react-native";
 import { NativeRouter } from "react-router-native";
 import Routers from '../../routers/home';
-import { Links, Images, ViewLink, ImageInbox } from '../../components/navBar'
-import ElevatedView from 'react-native-elevated-view'
+import { Links, Images, ViewLink, ImageInbox } from '../../components/navBar';
+import ElevatedView from 'react-native-elevated-view';
+import styles from './style';
 
-<<<<<<< HEAD
 //image
-=======
-import { connect } from 'react-redux'
-import { numberChange } from '../../actions/index'
-
->>>>>>> 8c02c185a3a763b2cb44d934acf610311a954356
 import {
     IconGreenInbox, IconGreenAccount, IconGreyAccount, IconGreenBeranda,
     IconGreyBeranda, IconGreenHelp, IconGreyHelp, IconGreyInbox, IconGreenChat, IconGreyChat
 } from '../../assets/navBar'
 
-<<<<<<< HEAD
 export default class Index extends Component {
-=======
-class Index extends Component {
->>>>>>> 8c02c185a3a763b2cb44d934acf610311a954356
 
     constructor(props) {
         super(props)
@@ -85,11 +76,8 @@ class Index extends Component {
     };
 
     render() {
-<<<<<<< HEAD
         this.props.numberChange()
 
-=======
->>>>>>> 8c02c185a3a763b2cb44d934acf610311a954356
         var { colorAccount, colorBeranda, colorChat, colorIndox, colorHelp } = this.state
 
         return (
@@ -135,37 +123,3 @@ class Index extends Component {
         )
     }
 };
-
-<<<<<<< HEAD
-=======
-const mapStateToProps = (state) => {
-    const { number } = state.reducer
-    console.log('number')
-    return { number }
-}
-
-export default connect(mapStateToProps, { numberChange })(Index)
-
->>>>>>> 8c02c185a3a763b2cb44d934acf610311a954356
-const styles = StyleSheet.create({
-    container: {
-        flex: 1,
-        justifyContent: 'flex-end',
-    },
-    textGreen: {
-        fontSize: 10,
-        color: 'green'
-    },
-    textBlack: {
-        fontSize: 10,
-        color: '#a2a3a5'
-    },
-    view: {
-        flexDirection: "row",
-        justifyContent: "space-around",
-        paddingEnd: 10,
-        width: '100%',
-        height: 55,
-        backgroundColor: '#f2f2f2'
-    }
-});

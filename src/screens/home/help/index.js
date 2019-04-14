@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
 import { View, Text, Image, TextInput, ScrollView } from 'react-native';
-import { GoPulsa, GoBills, GoShop, GoTix, GoDeals, PayLater, MyAccount, Others, Cooperation } from '../../../assets/help'
+import { GoPulsa, GoBills, GoShop, GoTix, GoDeals, PayLater, MyAccount, Others, Cooperation, GoCar, GoBluebird, GoFood, GoBox } from '../../../assets/help'
 import { Header } from '../../../components/header'
 import { ListHelp } from '../../../components/listHelp'
+import styles from './style'
 
 export default class Help extends Component {
 
@@ -16,20 +17,18 @@ export default class Help extends Component {
             <View style={{ flex: 1 }}>
                 <Header>Help</Header>
                 <ScrollView>
-                    <View style={{
-                        backgroundColor: "black",
-                        width: '100%',
-                        padding: 7
-                    }}><TextInput
-                            value={text}
-                            placeholder='Cari informasi di sini'
-                            onChangeText={text => this.setState({ text })}
-                            style={{
-                                backgroundColor: "#dddddd",
-                                height: 45,
-                                paddingStart: 20
-                            }} />
+                    <View style={styles.search}><TextInput
+                        value={text}
+                        placeholder='Cari informasi di sini'
+                        onChangeText={text => this.setState({ text })}
+                        style={styles.inputSearch} />
                     </View>
+
+                    <ListHelp source={GoCar} style={{ width: 34, height: 21 }}>GO-CAR</ListHelp>
+                    <ListHelp source={GoBluebird} style={{ width: 39, height: 18 }}>GO-BLUEBIRD</ListHelp>
+                    <ListHelp source={GoFood} style={{ width: 22, height: 27 }}>GO-FOOD</ListHelp>
+                    <ListHelp source={GoBox} style={{ width: 31, height: 20 }}>GO-BOX</ListHelp>
+
                     <ListHelp source={GoPulsa} style={{ width: 26, height: 29 }}>GO-PULSA</ListHelp>
                     <ListHelp source={GoBills} style={{ width: 26, height: 29 }}>GO-BILLS</ListHelp>
                     <ListHelp source={GoShop} style={{ width: 26, height: 29 }}>GO-SHOP</ListHelp>

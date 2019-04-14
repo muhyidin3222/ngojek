@@ -3,6 +3,7 @@ package com.mapapp;
 import android.app.Application;
 
 import com.facebook.react.ReactApplication;
+;
 import com.facebook.reactnative.androidsdk.FBSDKPackage;
 import com.arttitude360.reactnative.rngoogleplaces.RNGooglePlacesPackage;
 import com.airbnb.android.react.maps.MapsPackage;
