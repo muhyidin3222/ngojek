@@ -1,35 +1,23 @@
 
 export default styles = ({
-    textInput: {
-        width: '100%',
-        height: 40,
-        borderWidth: 1,
-        borderRadius: 20,
-        paddingStart: 15
+    container: {
+        flex: 1,
+        justifyContent: 'flex-end',
     },
-    backgroundGopay: {
-        width: '100%',
-        height: '100%',
-        padding: 13
+    textGreen: {
+        fontSize: 10,
+        color: 'green'
     },
-    goPay: {
-        width: '100%',
-        height: 150,
-        backgroundColor: '#1a09b7',
-        marginTop: 20,
-        borderRadius: 5
+    textBlack: {
+        fontSize: 10,
+        color: '#a2a3a5'
     },
-    textBackgroundSaldo: {
-        justifyContent: 'space-between',
-        backgroundColor: '#10019b',
+    view: {
+        flexDirection: "row",
+        justifyContent: "space-around",
+        paddingEnd: 10,
         width: '100%',
-        height: 45,
-        flexDirection: 'row',
-        padding: 10
-    },
-    textSaldo: {
-        fontSize: 15,
-        fontWeight: '500',
-        color: '#ffffff'
+        height: 55,
+        backgroundColor: '#f2f2f2'
     }
-})
+});

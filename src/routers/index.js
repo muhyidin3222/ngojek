@@ -12,11 +12,11 @@ export default class Routers extends Component {
         return (
             <Router>
                 <Stack key="root">
-                    <Scene key="changeAccount" component={ChangeAccount} hideNavBar={true} />
                     <Scene key="home" component={Home} hideNavBar={true} />
                     <Scene key="loginEndRegister" component={StartApp} hideNavBar={true} />
                     <Scene key="login" component={Login} hideNavBar={true} />
                     <Scene key="register" component={Register} hideNavBar={true} />
+                    <Scene key="changeAccount" component={ChangeAccount} hideNavBar={true} />
                 </Stack>
             </Router>
         )
