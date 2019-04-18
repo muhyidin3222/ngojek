@@ -13,7 +13,7 @@ class Go extends React.Component {
             <View style={container}>
                 <View style={rowLogo}>
                     <GoComponent source={GoRide} style={{ height: 25, width: 31 }}>GO-RIDE</GoComponent>
-                    <GoComponent source={GoCar} style={{ height: 15, width: 40 }}>GO-CAR</GoComponent>
+                    <GoComponent source={GoCar} style={{ height: 25, width: 39 }}>GO-CAR</GoComponent>
                     <GoComponent source={GoBluebird} style={{ height: 18, width: 40 }}>GO-BLUEBIRD</GoComponent>
                     <GoComponent source={GoFood} style={{ height: 25, width: 18 }}>GO-FOOD</GoComponent>
                 </View>

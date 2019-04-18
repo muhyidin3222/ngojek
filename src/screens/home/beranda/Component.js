@@ -23,32 +23,28 @@ const {
 const Header = () => {
     return (
         <View style={container}>
-            <View style={{
-                flexDirection: 'row'
+            <TouchableOpacity style={{
+                width: '80%',
             }}>
-                <TouchableOpacity style={{
-                    width: '80%',
-                }}>
-                    <View style={search}>
-                        <View style={posision}>
-                            <Image
-                                source={searching1}
-                                style={{ height: 18, width: 18 }} />
-                        </View>
-                        <Text style={textSearch}>
-                            Pesen kopi, yuk?
+                <View style={search}>
+                    <View style={posision}>
+                        <Image
+                            source={searching1}
+                            style={{ height: 18, width: 18 }} />
+                    </View>
+                    <Text style={textSearch}>
+                        Pesen kopi, yuk?
                             </Text>
+                </View>
+            </TouchableOpacity>
+            <View style={styles1.voucher}>
+                <TouchableOpacity>
+                    <View style={viewVoucher}>
+                        <Image
+                            source={voucher}
+                            style={{ height: 23, width: 21 }} />
                     </View>
                 </TouchableOpacity>
-                <View style={styles1.voucher}>
-                    <TouchableOpacity>
-                        <View style={viewVoucher}>
-                            <Image
-                                source={voucher}
-                                style={{ height: 23, width: 21 }} />
-                        </View>
-                    </TouchableOpacity>
-                </View>
             </View>
         </View>
     )

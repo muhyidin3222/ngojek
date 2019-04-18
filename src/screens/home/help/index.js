@@ -23,16 +23,14 @@ export default class Help extends Component {
                         onChangeText={text => this.setState({ text })}
                         style={styles.inputSearch} />
                     </View>
-                    <ListHelp source={GoPay} style={{ width: 34, height: 21 }}>GO-PAY</ListHelp>
-                    <ListHelp source={GoPoints} style={{ width: 39, height: 18 }}>GO-POINTS</ListHelp>
-                    <ListHelp source={GoSend} style={{ width: 22, height: 27 }}>GO-SEND</ListHelp>
-                    <ListHelp source={GoRide} style={{ width: 31, height: 20 }}>GO-RIDE</ListHelp>
-                    
+                    <ListHelp source={GoPay} style={{ width: 25, height: 25 }}>GO-PAY</ListHelp>
+                    <ListHelp source={GoPoints} style={{ width: 26, height: 23 }}>GO-POINTS</ListHelp>
+                    <ListHelp source={GoSend} style={{ width: 22, height: 25 }}>GO-SEND</ListHelp>
+                    <ListHelp source={GoRide} style={{ width: 32, height: 26 }}>GO-RIDE</ListHelp>
                     <ListHelp source={GoCar} style={{ width: 34, height: 21 }}>GO-CAR</ListHelp>
                     <ListHelp source={GoBluebird} style={{ width: 39, height: 18 }}>GO-BLUEBIRD</ListHelp>
                     <ListHelp source={GoFood} style={{ width: 22, height: 27 }}>GO-FOOD</ListHelp>
-                    <ListHelp source={GoBox} style={{ width: 31, height: 20 }}>GO-BOX</ListHelp>
-
+                    <ListHelp source={GoBox} style={{ width: 31, height: 19 }}>GO-BOX</ListHelp>
                     <ListHelp source={GoPulsa} style={{ width: 26, height: 29 }}>GO-PULSA</ListHelp>
                     <ListHelp source={GoBills} style={{ width: 26, height: 29 }}>GO-BILLS</ListHelp>
                     <ListHelp source={GoShop} style={{ width: 26, height: 29 }}>GO-SHOP</ListHelp>

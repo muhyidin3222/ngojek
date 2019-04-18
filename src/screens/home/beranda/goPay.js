@@ -1,18 +1,14 @@
 import React from 'react'
-import { View, Image, Text, TouchableNativeFeedback } from 'react-native'
+import { View, Image, Text } from 'react-native'
 import styles from '../styleberanda/styleindex'
-import { others1, others2, gopay, bayar, isiSaldo, nearby, searching1, voucher } from '../../../assets/beranda'
+import { others1, gopay, bayar, isiSaldo, nearby } from '../../../assets/beranda'
 import { GoPayComponent } from './Component'
 
 const {
     container,
     headerGopay,
     gopayImage,
-    container2,
-    containerGopay,
-    gopayComponentImage,
-    gopayComponentImageLainnya,
-    textComponentGopay
+    container2
 } = styles
 
 class Beranda extends React.Component {
@@ -33,7 +29,7 @@ class Beranda extends React.Component {
                     <GoPayComponent source={bayar}>Bayar</GoPayComponent>
                     <GoPayComponent source={nearby}>Nearby</GoPayComponent>
                     <GoPayComponent source={isiSaldo}>Isi Saldo</GoPayComponent>
-                    <GoPayComponent source={others1}>Lainnya</GoPayComponent>
+                    <GoPayComponent source={others1} onPress={this.props.onPress}>Lainnya</GoPayComponent>
                 </View>
             </View>
         )

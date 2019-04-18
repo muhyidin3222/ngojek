@@ -2,11 +2,12 @@ const styles = ({
     container: {
         height: 54,
         width: '100%',
-        // elevation: 1,
-        backgroundColor: 'white',
-        paddingLeft: 15,
-        paddingRight: 15,
-        justifyContent: 'center'
+        paddingLeft: 10,
+        paddingRight: 10,
+        justifyContent: 'center',
+        flexDirection: 'row',
+        marginTop: 10,
+        backgroundColor: '#ffffff'
     },
     search: {
         borderColor: '#DCDCDC',
