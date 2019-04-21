@@ -1,8 +1,12 @@
 import React from 'react';
-import { View, Image, Text, TouchableOpacity, TouchableNativeFeedback } from 'react-native';
+import { View, StyleSheet, Image, Text, TouchableOpacity, Animated, TouchableNativeFeedback, ScrollView } from 'react-native';
 import styles1 from '../styleberanda/styleHeader'
 import styles2 from '../styleberanda/styleNgojekAplication'
 import styles3 from '../styleberanda/styleindex'
+
+import Go from './go'
+import GoPay from './goPay'
+import stop from '../../../assets/stop.jpg'
 
 import { searching1, voucher } from '../../../assets/beranda'
 
@@ -77,4 +81,81 @@ const GoPayComponent = (props) => {
     )
 }
 
-export { Header, GoComponent, GoPayComponent };
+const AnimationSwipeUp = (props) => {
+    return (
+        <Animated.View style={[styles.subView, { transform: [{ translateY: props.bounceValue }] }]}>
+            <TouchableOpacity onPress={props.onPress} style={styles.touchableOpacity}>
+                <Text style={styles.touchableOpacityText}>X</Text>
+            </TouchableOpacity>
+            <Text style={styles.textFitur}>{props.children}</Text>
+            <ScrollView
+                horizontal
+                pagingEnabled
+                showsHorizontalScrollIndicator={false}>
+                <View style={styles.viewImage} >
+                    <Image source={stop} style={styles.image} />
+                </View>
+                <View style={styles.viewImage} >
+                    <Image source={stop} style={styles.image} />
+                </View>
+            </ScrollView>
+            {props.Component}
+        </Animated.View>
+    )
+}
+
+var styles = StyleSheet.create({
+    container: {
+        flex: 1,
+        alignItems: 'center'
+    },
+    button: {
+        padding: 8,
+    },
+    buttonText: {
+        fontSize: 17,
+        color: "#007AFF",
+        marginLeft: 10
+    },
+    subView: {
+        position: "absolute",
+        bottom: 0,
+        left: 0,
+        right: 0,
+        backgroundColor: "#ffffff",
+        height: 480
+    },
+    image: {
+        borderTopLeftRadius: 18,
+        borderTopRightRadius: 18,
+        height: 100,
+        width: '100%'
+    },
+    textFitur: {
+        fontSize: 20,
+        fontWeight: '500',
+        marginLeft: 10,
+        padding: 5
+    },
+    viewImage: {
+        height: 150,
+        width: 340,
+        borderWidth: 0,
+        margin: 10,
+        borderRadius: 20,
+        borderColor: '#ffffff',
+        elevation: 3
+    },
+    touchableOpacity: {
+        marginLeft: 10,
+        padding: 5,
+        marginTop: 5
+    },
+    touchableOpacityText: {
+        fontSize: 20,
+        fontWeight: '600'
+    }
+});
+
+
+export { Header, GoComponent, GoPayComponent, AnimationSwipeUp };

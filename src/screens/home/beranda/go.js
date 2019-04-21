@@ -21,7 +21,7 @@ class Go extends React.Component {
                     <GoComponent source={GoSend} style={{ height: 27, width: 25 }}>GO-SEND</GoComponent>
                     <GoComponent source={GoDeals} style={{ height: 27, width: 27 }}>GO-DEALS</GoComponent>
                     <GoComponent source={GoPulsa} style={{ height: 25, width: 23 }}>GO-PULSA</GoComponent>
-                    <GoComponent source={others1} style={{ height: 25, width: 27 }} >LAINNYA</GoComponent>
+                    <GoComponent source={others1} style={{ height: 25, width: 27 }} onPress={this.props.onPress}>LAINNYA</GoComponent>
                 </View>
             </View>
         )

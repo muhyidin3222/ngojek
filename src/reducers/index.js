@@ -8,6 +8,7 @@ const initalState = {
 const reducer = (state = { initalState }, action) => {
     switch (action.type) {
         case NUMBER:
+            console.log(action.payload)
             return { ...state, number: action.payload }
         default:
             return state

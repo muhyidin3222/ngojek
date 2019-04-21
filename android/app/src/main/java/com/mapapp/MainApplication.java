@@ -7,7 +7,7 @@ import com.facebook.react.ReactApplication;
 import com.facebook.reactnative.androidsdk.FBSDKPackage;
 import com.arttitude360.reactnative.rngoogleplaces.RNGooglePlacesPackage;
 import com.airbnb.android.react.maps.MapsPackage;
-import com.BV.LinearGradient.LinearGradientPackage;
+// import com.BV.LinearGradient.LinearGradientPackage;
 import com.facebook.react.ReactNativeHost;
 import com.facebook.react.ReactPackage;
 import com.facebook.react.shell.MainReactPackage;
@@ -43,7 +43,7 @@ public class MainApplication extends Application implements ReactApplication {
           new MainReactPackage(),
             new FBSDKPackage(mCallbackManager),
             new RNGooglePlacesPackage(),
-            new LinearGradientPackage(),
+            // new LinearGradientPackage(), 
             new MapsPackage()
       );
     }

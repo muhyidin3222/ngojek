@@ -76,8 +76,6 @@ export default class Index extends Component {
     };
 
     render() {
-        this.props.numberChange()
-
         var { colorAccount, colorBeranda, colorChat, colorIndox, colorHelp } = this.state
 
         return (

@@ -1,80 +1,79 @@
 import React from 'react'
-import { View, Animated, Text, StyleSheet, TouchableOpacity } from 'react-native'
-import { Header } from './Component'
+import { Animated } from 'react-native'
+import { connect } from "react-redux";
+import { Header, AnimationSwipeUp } from './Component'
 import Go from './go'
 import GoPay from './goPay'
+import { numberChange } from '../../../actions'
 
+var hidden1 = true;
+var hidden2 = true;
 
-var isHidden = true;
 class Beranda extends React.Component {
 
     constructor(props) {
         super(props);
         this.state = {
-            bounceValue: new Animated.Value(100)
+            bounceValue1: new Animated.Value(0),
+            bounceValue2: new Animated.Value(0)
         };
     }
 
-
-    _toggleSubview() {
-        var toValue = 500;
-
-        if (isHidden) {
-            toValue = 0;
-        }
-
+    AnimationSwipeUp1() {
         Animated.spring(
-            this.state.bounceValue,
+            this.state.bounceValue1,
             {
-                toValue: toValue,
+                toValue: hidden1 ? 0 : 500,
                 velocity: 3,
                 tension: 2,
                 friction: 8,
             }
         ).start();
-        isHidden = !isHidden;
+        hidden1 = !hidden1
     }
 
 
-    render() {
-        return (
-            <View style={{ flex: 1 }}>
-                <Header />
-                <GoPay onPress={() => { this._toggleSubview() }} />
-                <Go />
+    AnimationSwipeUp2() {
+        Animated.spring(
+            this.state.bounceValue2,
+            {
+                toValue: hidden2 ? 0 : 500,
+                velocity: 3,
+                tension: 2,
+                friction: 8,
+            }
+        ).start();
+        hidden2 = !hidden2
+    }
 
-                <Animated.View style={[styles.subView, { transform: [{ translateY: this.state.bounceValue }] }]}>
-                    <TouchableOpacity onPress={() => { this._toggleSubview() }}>
-                        <Text style={styles.buttonText}>Show Subview</Text>
-                    </TouchableOpacity>
-                    <GoPay />
-                </Animated.View>
-            </View >
+    render() {
+        const { bounceValue1, bounceValue2 } = this.state
+
+        return (
+            <Animated.View style={{ flex: 1, backgroundColor: '#ffffff' }}>
+                <Header />
+                <GoPay onPress={() => { this.AnimationSwipeUp1() }} />
+                <Go onPress={() => { this.AnimationSwipeUp2() }} />
+                <AnimationSwipeUp
+                    Component={<Go />}
+                    onPress={() => this.AnimationSwipeUp1()}
+                    bounceValue={bounceValue1} >Fitur GO-PAY lainnya!</AnimationSwipeUp>
+                <AnimationSwipeUp
+                    Component={<GoPay />}
+                    onPress={() => this.AnimationSwipeUp2()}
+                    bounceValue={bounceValue2} >Fitur GO-NGOJEK lainnya!</AnimationSwipeUp>
+            </Animated.View >
         )
     }
 }
 
-export default Beranda;
+const mapStateToProps = (state) => {
+    const { number } = state.reducer
+    return { number }
+}
 
+const mapActionCreators = {
+    numberChange
+};
 
-var styles = StyleSheet.create({
-    container: {
-        flex: 1,
-        alignItems: 'center'
-    },
-    button: {
-        padding: 8,
-    },
-    buttonText: {
-        fontSize: 17,
-        color: "#007AFF"
-    },
-    subView: {
-        position: "absolute",
-        bottom: 0,
-        left: 0,
-        right: 0,
-        backgroundColor: "#ffffff",
-        height: 500,
-    }
-});
+export default connect(mapStateToProps, mapActionCreators)(Beranda);

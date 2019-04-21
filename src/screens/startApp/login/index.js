@@ -18,7 +18,6 @@ class Login extends React.Component {
     }
 
     cek() {
-        console.log('cek')
         setTimeout(() => {
             return (Actions.home())
         }, 1000);

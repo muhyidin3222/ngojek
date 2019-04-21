@@ -57,7 +57,6 @@ export default class ChangeAccount extends Component {
                         <View style={changeAccount.number}>
                             <CountryPicker
                                 onChange={value => {
-                                    console.log(value)
                                     this.setState({ cca2: value.cca2, callingCode: value.callingCode })
                                 }}
                                 cca2={cca2}
